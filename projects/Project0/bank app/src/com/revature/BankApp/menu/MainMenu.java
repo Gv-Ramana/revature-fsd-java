@@ -1,7 +1,6 @@
 package com.revature.BankApp.menu;
-
 import java.util.Scanner;
-
+import com.revature.BankApp.form.CustomerRgistrationForm;
 import com.revature.BankApp.form.LoginForm;
 import com.revature.BankApp.model.Customer;
 import com.revature.BankApp.model.DataManager;
@@ -17,41 +16,26 @@ public class MainMenu extends Menu{
 		 addMenuItem("Exit");
 		  
 	}
-	public void handleAction() {
-		System.out.println("Selected option is "+ selection);
-		Scanner scan = new Scanner(System.in);
-		switch(selection) {
+	void handleAction() {
+		Scanner scanner = new Scanner(System.in);
+		switch (selection) {
 		case 1:
-			System.out.println("======");
-			System.out.println("Register for new customer");
-			System.out.println("======\n");
-			
-			System.out.print("Enter Firstname : ");
-			String firstName = scan.nextLine();
-			
-			System.out.print("Enter lastname : ");
-			String lastName = scan.nextLine();
-			
-			System.out.print("Enter EmailId : ");
-			String emailId = scan.nextLine();
-			
-			System.out.print("Enter Password : ");
-			String password = scan.nextLine();
-			
-			DataManager.addCustomer(new Customer(firstName,lastName,emailId,password));
-			System.out.print("Customer Registered Successfully");
+			CustomerRgistrationForm customerRegistrationForm = new CustomerRgistrationForm("Customer Registration Form");
+			customerRegistrationForm.captureDataAndPerformAction();
 			displayMenuAndCaptureSelection();
 			break;
-		case 2:
-			 LoginForm loginform = new LoginForm("Login Form");
-			 loginform.captureDataAndPerformAction();
-			 break;
-			
-		case 3:
-			System.out.println("Login as Employee");
+		case 2 :
+			LoginForm loginForm = new LoginForm("Customer registration form");
+			loginForm.captureDataAndPerformAction();
+			displayMenuAndCaptureSelection();
 			break;
-		case 4:
-			System.out.println("Exit");
+		case 3 :
+			System.out.println("Welcome Back!!!");
+			break;
+		case 4 : 
+			System.out.println("Closing The Application");
+			break;
+
 		}
 	}
 	

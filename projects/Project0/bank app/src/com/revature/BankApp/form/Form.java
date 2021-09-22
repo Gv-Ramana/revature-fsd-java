@@ -20,13 +20,11 @@ public abstract class Form {
 			displayTitle();
 			captureData();
 			action();
-			
 		}
-	}
+		}
+	
 	
 	public abstract void captureData();
 	public abstract void action();
 }
-	
 
-}
