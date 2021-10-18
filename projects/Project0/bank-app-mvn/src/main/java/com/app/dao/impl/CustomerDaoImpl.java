@@ -52,8 +52,8 @@ public class CustomerDaoImpl implements CustomerDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentCustomerId = resultSet.getInt("id");
-				String firstname = resultSet.getString("firstname");
-				String lastname = resultSet.getString("lastname");
+				String firstname = resultSet.getString("first_name");
+				String lastname = resultSet.getString("last_name");
 				String email_id = resultSet.getString("email_id");
 				String password = resultSet.getString("password");
 				

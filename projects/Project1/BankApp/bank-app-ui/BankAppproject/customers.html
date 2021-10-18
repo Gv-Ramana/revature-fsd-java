@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>Bank Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="Bank/home.css">
+</head>
+
+<body style="background-color: #1cbcc4;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Bank App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Accounts.html">Accounts</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Customers</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Validationofaccounts.html">Validation of Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <h1 class="text-center font-weight-bold ">Customers</h1><br>
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Customer Number</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Accounts</th>
+                </tr>
+            </thead>
+            <tbody id="cust">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var customer1 = {
+            customerNumber: 654987121,
+            firstName: "Lewis",
+            lastName: "Hamilton",
+            email: "lewis@gmail.com",
+            accounts: 6
+        };
+        var customer2 = {
+            customerNumber: 654987122,
+            firstName: "Max",
+            lastName: "Verstappen",
+            email: "max@gmail.com",
+            accounts: 5
+        };
+        var customer3 = {
+            customerNumber: 654987123,
+            firstName: "Lando",
+            lastName: "Norris",
+            email: "lando@gmail.com",
+            accounts: 4
+        };
+        var customer4 = {
+            customerNumber: 654987124,
+            firstName: "Daniel",
+            lastName: "Riccardio",
+            email: "daniel@gmail.com",
+            accounts: 5
+        };
+        var customer5 = {
+            customerNumber: 654987122,
+            firstName: "Sebastian",
+            lastName: "Vettel",
+            email: "sebastian@gmail.com",
+            accounts: 3
+        };
+
+        var customers = [customer1, customer2, customer3, customer4, customer5, customer5, customer4, customer3, customer2, customer1, customer1, customer2, customer3, customer4, customer5];
+        let element = "";
+        for (var customer of customers) {
+            element += `<tr>
+            <td>${customer.customerNumber}</td>
+            <td>${customer.firstName}</td>
+            <td>${customer.lastName}</td>
+            <td>${customer.email}</td>
+            <td>${customer.accounts}</td>
+          </tr>`
+        }
+        document.getElementById("cust").innerHTML = element;
+    </script>
+</body>
+
+</html>

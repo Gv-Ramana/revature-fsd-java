@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .img {
+
+            /* background-image: url("images/bg1.jpg"); */
+
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+        /* .csi{
+            text-align: center;
+        } */
+
+        form {
+           
+            width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #formm {
+            font-size: larger;
+            color: rgba(228, 229, 245, 0.938);
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Bankapp.Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="scripts/signup.js">
+</head>
+
+<body class="img">
+
+
+    <!-- <a href="Home.html">Home</a>
+      <a href="Signup.html">SignUp</a>
+      <a href="CustomerLogin.html">CustomerLogin</a>
+      <a href="EmployeeLogin.html">EmployeeLogin</a>     -->
+
+
+
+    <nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #a8d1ee">
+        <a class="navbar-brand" href="#">
+            <img src="#" class="d-inline-block align-top" alt="">
+            <span class="badge badge-warning">Bank</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="Home.html">Home <span class="sr-only"></span></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">MyAccount</a>
+                </li> -->
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="Signup.html">SignUp</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="CustomerLogin.html">CustomerLogin</a>
+                        <a class="dropdown-item" href="EmployeeLogin.html">EmployeeLogin</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">LogOut</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div class="cls">
+        <h1 >Old Second Bankcorp...</h1><br>
+
+    </div>
+
+    <!-- <form id="formm">
+
+            <div>
+                <label for="fn">FirstName:</label>
+                <input type="text" id="fn" placeholder="Enter Your First Name" name="fn">
+                <div id="firstNameError" class="validation-error"></div>
+            </div><br>
+            <div>
+                <label for="ln">LastName:</label>
+                <input type="text" id="ln" placeholder="Enter Your Last Name" name="ln">
+                <div id="lastNameError" class="validation-error"></div>
+            </div><br>
+            <div>
+                <label for="email">Email: </label>
+
+                <input type="text" id="email" title="Enter valid Email." name="email" placeholder="Enter Your Email"
+                    required>
+                <div id="emailValidation" class="validation-error"></div>
+
+            </div><br>
+            <div>
+                <label for="ps">Password:</label>
+                <input type="password" id="ps" placeholder="Enter Your Password" required name="ps">
+                <div id="passwordValidation" class="validation-error"></div>
+            </div><br>
+            <div>
+                <label for="pn">PhoneNo</label>
+                <input type="text" id="pn" placeholder="Enter Your PhoneNo" name="pn">
+                <div id="phonenoValidation" class="validation-error"></div>
+            </div><br> -->
+
+
+    <div class="csi col-sm-4" id="sah" >
+        <div  >
+        <form class="form-signin" id="formm" style="color: black;">
+            <img class="#" src="#" alt="" width="" height="72">
+            <h1 class="h3 mb-3 font-weight-lighter">Customer Sign in</h1>
+
+
+            <label for="fn">FirstName :</label>
+            <input type="email" id="fn" class="form-control" name="fn" placeholder="First Name" autofocus>
+            <div id="firstNameError" class="validation-error"></div>
+
+            <label for="ln" >LastName :</label>
+            <input type="email" id="ln" class="form-control" name="ln" placeholder="Last Name" autofocus>
+            <div id="lastNameError" class="validation-error"></div>
+
+            <label for="email">Email address :</label>
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email address">
+            <div id="emailValidation" class="validation-error"></div>
+
+            <label for="ps" >Password :</label>
+            <input type="password" id="ps" class="form-control" name="ps" placeholder="Password">
+            <div id="passwordValidation" class="validation-error"></div>
+
+            <label for="pn" >Phone Number :</label>
+            <input type="email" id="pn" name="pn" class="form-control" placeholder="Phone Number">
+            <div id="phonenoValidation" class="validation-error"></div>
+            <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> -->
+            <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p> -->
+        </form><br>
+</div>
+
+
+        <div class="container">
+
+            <button type="button" id="sub" class="btn btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal">SignUp</button>
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        </div>
+                        <div class="modal-body" id="Error">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="CustomerLogin.html" id="close"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </form>
+        <!-- <div class="alert alert-danger" id="error">Signup failed. Contact administrator.</div> -->
+
+
+
+
+    </div>
+
+
+    <script src="scripts/signup.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

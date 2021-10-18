@@ -45,6 +45,7 @@ public class LoginForm extends Form {
 			}
 		} catch (SQLException e) {
 			System.out.println("Login failed");
+			e.printStackTrace();
 		}
 		
 		

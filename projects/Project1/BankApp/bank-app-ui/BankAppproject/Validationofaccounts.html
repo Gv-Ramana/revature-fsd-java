@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Bank Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="Bank/home.css">
+</head>
+
+<body style="background-color: #1cbcc4;">
+     
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Bank App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Signup</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Accounts.html">Accounts</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="customers.html">Customers</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Validation of Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <h1 class="text-center font-weight-bold ">Validation of Accounts</h1><br>
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Account Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Balance</th>
+                    <th scope="col">Approve/Reject</th>
+                </tr>
+            </thead>
+            <tbody id="cust">
+            </tbody>
+        </table>
+    </div>
+    <script>
+         var account1 = {
+      accountNumber: 245542652,
+      name: "Lewis",
+      balance: 50000
+    };
+    var account2 = {
+      accountNumber: 245542653,
+      name: "Lewis",
+      balance: 5000
+
+    };
+    var account3 = {
+      accountNumber: 245542654,
+      name: "Max",
+      balance: 52000
+
+    };
+    var account4 = {
+      accountNumber: 245542655,
+      name: "Lando",
+      balance: 55000
+
+    };
+    var account5 = {
+      accountNumber: 245542656,
+      name: "Sebastian",
+      balance: 70000
+
+    };
+    var account6 = {
+      accountNumber: 245542657,
+      name: "Daniel",
+      balance: 60000
+    };
+    var accounts = [account1, account2, account3, account4, account5, account6];
+    let element = "";
+    for (var account of accounts) {
+            element += `<tr>
+            <td>${account.accountNumber}</td>
+            <td>${account.name}</td>
+            <td>${account.balance}</td>
+            <td><button type="button" class="btn btn-success">Approve</button> <button type="button" class="btn btn-danger">Reject</button></td>
+          </tr>`
+        }
+    document.getElementById("cust").innerHTML = element;
+    </script>
+    </body>
+    </html>

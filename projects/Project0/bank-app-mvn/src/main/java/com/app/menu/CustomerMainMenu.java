@@ -38,10 +38,10 @@ public class CustomerMainMenu extends Menu {
 			
 			WithdrawAndDeposit wd = new WithdrawAndDeposit("Transaction Menu");
 			String temp = wd.getAccount();
-			try {
-				if (accdao.validAccount(temp).getApproved() == 'Y') {
+			 try {
+				 if (accdao.validAccount(temp).getApproved() == 'Y') {
 					wd.displayMenuAndSelectOption();
-				} else {
+				 } else {
 					System.out.println("Account Not Approved");
 				}
 			} catch (SQLException e) {
