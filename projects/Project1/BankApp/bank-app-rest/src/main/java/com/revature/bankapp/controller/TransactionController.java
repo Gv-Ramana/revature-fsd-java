@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -37,7 +36,7 @@ public class TransactionController {
 			double newBalance = account.getBalance();
 			newBalance += depositDetails.getBalance();
 			account.setBalance(newBalance);
-			dao.insert(new Transaction('C', depositDetails.getBalance()));
+			dao.insert(new Transaction('D', depositDetails.getBalance()));
 			dao.update(account);
 			return Response.status(200).build();
 		} catch (SQLException e1) {
@@ -57,7 +56,7 @@ public class TransactionController {
 			double newBalance = account.getBalance();
 			newBalance -= withdrawDetails.getBalance();
 			account.setBalance(newBalance);
-			dao.insert(new Transactions('D', withdrawDetails.getBalance()));
+			dao.insert(new Transaction('W', withdrawDetails.getBalance()));
 			dao.update(account);
 			return Response.status(200).build();
 		} catch (SQLException e1) {
@@ -67,14 +66,17 @@ public class TransactionController {
 		}
 	}
 	
+
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response get(@PathParam("id") int id) {
 		try {
-			List<Transactions> transactionList;
+			List<Transaction> transactionList;
 			transactionList = dao.transactionList(id);
 			System.out.println(transactionList);
+			System.out.println(id);
+			
 			System.out.println(CustomerDaoImpl.currentCustomerId);
 			return Response
 					.ok()

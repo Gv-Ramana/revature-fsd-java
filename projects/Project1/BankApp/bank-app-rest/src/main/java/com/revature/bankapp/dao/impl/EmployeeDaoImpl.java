@@ -117,31 +117,26 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	}
 
-	@Override
 	public List showCustomerList() throws AppException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public List showTransList(long accountId) throws AppException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public List getAccountsToVerify() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public void approveAccount(long accountId) throws SQLException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void rejectAccount(long accountId) throws SQLException {
 		// TODO Auto-generated method stub
 		

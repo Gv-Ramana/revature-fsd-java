@@ -38,7 +38,7 @@ public class TransactionDaoImpl implements TransactionDao {
 
 	}
 
-	public static List<Transaction> transactionList() throws SQLException {
+	public static List<Transaction> transactionList(int id) throws SQLException {
 		List<Transaction> transactionList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from transaction where accountId = ?";
@@ -61,31 +61,26 @@ public class TransactionDaoImpl implements TransactionDao {
 
 	}
 
-	@Override
 	public void performWithdrawl(int accountId, double money) throws AppException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void performDeposit(long accountId, double money) throws AppException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public long showBalance(long accounId) throws AppException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public void addTransaction(int accountId, String type, double money) throws AppException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public List<Transaction> showTransactions(long accountId) throws AppException {
 		// TODO Auto-generated method stub
 		return null;

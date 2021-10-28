@@ -25,7 +25,7 @@ public class CustomerController {
 	private CustomerDao dao = new CustomerDaoImpl();
 
 	@POST
-    @Consumes(MediaType.APPLICATION_JSON)
+
 	public Response create(Customer customer) {
 		LOGGER.info("Start");
 		LOGGER.debug("{}", customer);

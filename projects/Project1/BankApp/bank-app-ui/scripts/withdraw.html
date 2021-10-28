@@ -2,26 +2,26 @@
 <html>
 
 <head>
-    <style>
-          .abc {
-            /* background-image: url("images/bg1.jpg"); */
 
-            height: 500px;
+    <style>
+        .csi {
+            background-image: url("images/login.jpg");
+
+            height: 700px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-
-
-
-
+             
+        
+        }
+        #success{
+            color: rgb(41, 197, 93);
+            text-align: center;
         }
 
-        #frm {
-            font-size: larger;
-            color: rgb(240, 236, 236);
-        }
-    </style>
-    <link rel="stylesheet" href="css//styles.css">
+        </style>
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body class="abc">
+<body>
 
 
     <!-- <a href="Home.html">Home</a>
@@ -38,7 +38,7 @@
       <a href="EmployeeLogin.html">EmployeeLogin</a>     -->
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a8d1ee">
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
         <a class="navbar-brand" href="#">
             <img src="#" class="d-inline-block align-top" alt="">
             <span class="badge badge-warning">S</span>
@@ -61,7 +61,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="CreateAccount.html">Create Accounts</a>
-                        <a class="dropdown-item" href="Customer.html">View Accounts</a>
+                        <a class="dropdown-item" href="ViewAccounts.html">View Accounts</a>
                         <!-- <div class="dropdown-divider"></div> -->
                         <a class="dropdown-item" href="#"></a>
                     </div>
@@ -98,64 +98,52 @@
 
         </div>
     </nav>
+    <div class="csi">
+        <div class="cls">
+            <h1>Old Second Bankcorp..</h1><br><br>
 
+        </div>
+        <h1 id="success" class="alert alert success"></h1>
 
-
-   
-
-
-    <div class="cls">
-        <h1>Reserve Bank</h1><br>
-
-    </div>
-    <span style="color: crimson;"> <h1 id="dis" > </h1></span>
-    <div class="csi col-sm-4">
-        
-        <form class="form-signin" id="frm">
-            <img class="#" src="#" alt="" width="" height="72">
-            <h1 class="h3 mb-3 font-weight-lighter">CreateAccount</h1>
-
-            <label for="accno">AccountNumber :</label>
-            <input type="AccountNumber" id="accno" class="form-control" name="accno" placeholder=" Enter the Account Number">
-            <div id="AccountError" class="validation-error"></div>
+        <div class="container ">
             
-
-            <label for="ps" >Balance : </label>
-            <input type="Balance" id="ps" class="form-control" name="ps" placeholder="Enter the Amount"><br>
-            <div id="balanceError" class="validation-error"></div>
-           
-            
-            <button class="btn btn-lg btn-primary btn-block col-sm-4"  id="sub" type="button">Create</button>
-            <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p> -->
-            
-        </form>
-
-
-        <!-- <form id="frm">
-            <label for="accno">Account Number: </label><input type="AccountNumber" required id="accno" name="accno"
-                placeholder="Enter the account number" />
-            <br /><br>
-            <label for="ps">Balance:</label>
-            <input type="Balance" id="ps" placeholder="Enter the amount" name="ps" required><br><br>
-            <a href="#"><input id="sub" class="btn btn-primary " type="button" value="Create"></a>
-            
-        </form> -->
+            <div id="error" class="alert alert warning"></div>
+            <div class="row justify-content-center align-items-center ">
+                <div class="card text-dark   mb-3 mb-3 col-12 col-lg-4">
+                    <div class="card-header bg-transparent text-center" style="font-weight: bold;">Withdrawal</div>
+                    <div class="card-body  justify-content-center align-items-center">
+                        <h5 class="card-title" id="setAccountNumber" style="text-align: center;">Enter Amount :</h5>
+                        <div class="row justify-content-center align-items-center "><input type="text" name="amount"
+                                id="amount" placeholder="Enter Amount Here"></div>
+                        <div id="amountError" class="validation-error"></div>
+                    </div>
+                    <div class="card-footer bg-transparent row  justify-content-center align-items-center  ">
+                        <input type="button" id="withdraw" value="Withdraw">
+                    </div>
+                </div>
+            </div>
 
 
 
-    </div>
+        </div>
 
 
 
-    <script src="scripts/createAccount.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+
+
+
+
+
+
+        <script src="scripts/withdraw.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
 
 
 

@@ -1,0 +1,42 @@
+/* body{
+    font-size: 15px;
+    line-height: 1.52;
+    color:rgb(86, 171, 245);
+     
+    font-family:'Open',sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+} */
+body{
+    background-color: whitesmoke;
+}
+h1{
+    text-align: center;
+    font-size: 16px;
+} 
+ li {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: aquamarine;
+    border: 1px solid rgb(187, 112, 112);
+    cursor: pointer;
+
+}a{
+    text-decoration: none;
+}
+  li:hover{
+    background-color: blueviolet;
+    color: aquamarine;
+    border: 1px solid aquamarine;
+    
+}
+.menu-list{
+    padding: 15px;
+}
+ .breakfast{
+      
+     padding: 20px;
+     float: left;
+ }

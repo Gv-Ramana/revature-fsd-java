@@ -10,12 +10,7 @@ import com.revature.bankapp.model.Transaction;
 
 public interface EmployeeDao<Customer> {
 	
-	public List<Customer>  showCustomerList() throws AppException;
-	public List<Transaction> showTransList(long accountId) throws AppException;
-	List<Account> getAccountsToVerify() throws SQLException;
-	void approveAccount( long accountId) throws SQLException;
-	void rejectAccount(long accountId) throws SQLException;
-	
+	 List<Customer> viewCustomer() throws SQLException;
 	
 
 }
